@@ -167,6 +167,14 @@ application.register('autocomplete', CustomAutocomplete)
 
 Heavily inspired on [github's autocomplete element](https://github.com/github/auto-complete-element).
 
+## Development
+
+```sh
+yarn        # install all the things
+yarn start  # run the examples dir
+yarn test   # automated tests
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/afcapel/stimulus-autocomplete>.  This project is intended to be a safe, welcoming space for  collaboration, and contributors are expected to adhere to the  Contributor Covenant code of conduct.
