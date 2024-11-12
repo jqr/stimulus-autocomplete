@@ -232,7 +232,9 @@ export default class Autocomplete extends Controller {
     this.resultsTarget.innerHTML = html
     this.identifyOptions()
     if (!!this.options) {
-      this.open()
+      if (this.hasFocus()) {
+        this.open()
+      }
     } else {
       this.close()
     }
@@ -261,6 +263,10 @@ export default class Autocomplete extends Controller {
         detail: { action: "close", inputTarget: this.inputTarget, resultsTarget: this.resultsTarget }
       })
     )
+  }
+
+  hasFocus() {
+    return this.inputTarget === document.activeElement;
   }
 
   get resultsShown() {
